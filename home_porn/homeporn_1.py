@@ -6,12 +6,15 @@
 this_list = [9, 7, 6, 6, 5, 3, 1]
 user_input = int(input(f'Введите цифру: '))
 
-# for i in range(len(this_list)):
-#     if user_input > this_list[i]:
-#         this_list.insert(i ,user_input)
+for i in range(len(this_list)):
+    if user_input > this_list[i]:
+        this_list.insert(i ,user_input)
+        if user_input == 1 or user_input == 0:
+            this_list.insert(i, user_input)
+        break
 
-i = 0
-while i < len(this_list) and user_input < this_list[i]:
-    i += 1
-this_list.insert(i, user_input)
+# i = 0
+# while i < len(this_list) and user_input < this_list[i]:
+#     i += 1
+# this_list.insert(i, user_input)
 print(this_list)
