@@ -10,5 +10,5 @@
 # Выведите измененный список на экран.
 
 num_list = [13, 5, 5, 8, 16, 4]
-for i in range(len(num_list)):
+for i in num_list[]:
     if num_list[i] % 2 == 0
