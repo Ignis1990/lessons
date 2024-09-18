@@ -50,5 +50,3 @@ for values in set_smol_dic.values():
         if values[i] % 2 == 0:
             values.pop(i)
 print(set_smol_dic)
-
-# print(set_smol_dic.values())
