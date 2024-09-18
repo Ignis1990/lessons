@@ -35,3 +35,12 @@
 #     sale_price = original_price - (original_price * sale)
 #     sale_value = original_price * sale
 # print(f'Сумма покупки составила {sale_price:.2f}, размер скидки - {sale_value:.2f}')
+
+# Task № 4. Дан словарь {1: [1, 2, 3, 4], 2: [5, 6, 7, 8]}. Удалите из вложенных списков все четные значения элементов.
+# Выведите измененный словарь на экран
+
+set_dic = {
+    1: [1, 2, 3, 4],
+    2: [5, 6, 7, 8]
+}
+set_dic_values = set_dic.values()
