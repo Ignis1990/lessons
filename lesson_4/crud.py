@@ -42,11 +42,26 @@ def update_db(
         new_name: str,
         new_desc: str
 ):
-    pass
+    data = read_db()
+    data[idx] = {'name': new_name, 'desc': new_desc}
+
+    with open('database.json', 'w', encoding='utf-8') as db:
+        json.dump(data, db, ensure_ascii=False, indent=4)
+
+    return 200
 
 
-def delete_db():
-    pass
+def delete_db(
+        idx: str
+):
+    data = read_db()
+
+    if idx in data:
+        data.pop(idx)
+        with open('database.json', 'r+', encoding='utf-8') as db:
+                        json.dump(data, db, ensure_ascii=False, indent=4)
+        print(f'Заметка успешно удалена!')
+        print(' ')
 
 
 if __name__ == '__main__':
