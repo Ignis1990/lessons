@@ -55,9 +55,10 @@ def delete_db(
         idx: str
 ):
     data = read_db()
+    data.pop(idx)
 
     if idx in data:
-        data.pop(idx)
+
         with open('database.json', 'r+', encoding='utf-8') as db:
                         json.dump(data, db, ensure_ascii=False, indent=4)
         print(f'Заметка успешно удалена!')
